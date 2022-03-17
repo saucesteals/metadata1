@@ -1,3 +1,6 @@
+// Implementation of Two's complement HEX
+// See: https://en.wikipedia.org/wiki/Hexadecimal
+// See: https://en.wikipedia.org/wiki/Two%27s_complement
 export const toTwosComplementHex = (num: number): string => {
   const size = 8;
 

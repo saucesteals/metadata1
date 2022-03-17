@@ -2,6 +2,8 @@
 
 export type Material = [number, number, number, number];
 
+// Implementation of the Tiny Encryption Algorithm
+// See: https://en.wikipedia.org/wiki/Tiny_Encryption_Algorithm
 export const tea = (payload: string, material: Material) => {
   if (payload.length === 0) return "";
 
