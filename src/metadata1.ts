@@ -2,14 +2,14 @@ import { CollectorData } from "./types/collectors";
 import { tea, Material } from "./helpers/tea";
 import crc32 from "crc-32";
 import { toTwosComplementHex } from "./helpers/twoscomplement";
-import * as Collectors from "./collectors";
+import * as collectors from "./collectors";
 import { Metadata1Data } from "./types/collectors";
 
 const identifier = "ECdITeCs";
 const material: Material = [1888420705, 2576816180, 2347232058, 874813317];
 
 export const generate = (data: CollectorData): Metadata1Data => {
-  return Object.values(Collectors).reduce((acc, { generate }) => {
+  return Object.values(collectors).reduce((acc, { generate }) => {
     return Object.assign(acc, generate(data));
   }, {} as Metadata1Data);
 };
