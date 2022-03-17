@@ -1,0 +1,37 @@
+{
+  "name": "metadata1",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": "https://github.com/saucesteals/metadata1",
+  "author": "Daniel <saucesteals@gmail.com>",
+  "license": "MIT",
+  "files": ["dist"],
+  "devDependencies": {
+    "@types/node": "^17.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.15.0",
+    "@typescript-eslint/parser": "^5.15.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.11.0",
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-plugin-import": "^2.25.4",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.7",
+    "prettier": "^2.6.0",
+    "typescript": "^4.5.4"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": ["yarn lint", "yarn format"],
+    "{*.json,.{eslintrc,prettierrc}}": ["yarn format --parser json"]
+  },
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --ignore-path .eslintignore --write",
+    "lint": "cross-env NODE_ENV=development eslint --cache",
+    "prepare": "husky install .husky",
+    "prepublishOnly": "yarn build"
+  },
+  "dependencies": {
+    "crc-32": "^1.2.0"
+  }
+}

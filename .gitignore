@@ -1,0 +1,15 @@
+# Temp files
+*.dev.ts
+/tmp
+
+# Node modules
+node_modules
+
+# Build files
+dist
+
+# Yarn
+yarn-error.log
+
+# Eslint
+.eslintcache
