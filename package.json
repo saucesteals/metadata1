@@ -6,7 +6,9 @@
   "repository": "https://github.com/saucesteals/metadata1",
   "author": "Daniel <saucesteals@gmail.com>",
   "license": "MIT",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "devDependencies": {
     "@types/node": "^17.0.1",
     "@typescript-eslint/eslint-plugin": "^5.15.0",
@@ -21,8 +23,13 @@
     "typescript": "^4.5.4"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": ["yarn lint", "yarn format"],
-    "{*.json,.{eslintrc,prettierrc}}": ["yarn format --parser json"]
+    "*.{js,jsx,ts,tsx}": [
+      "yarn lint",
+      "yarn format"
+    ],
+    "{*.json,.{eslintrc,prettierrc}}": [
+      "yarn format --parser json"
+    ]
   },
   "scripts": {
     "build": "tsc",
