@@ -1,9 +1,8 @@
-import { CollectorData } from "./types/collectors";
+import { CollectorData, Metadata1Data } from "./types/collectors";
 import { tea, Material } from "./helpers/tea";
 import crc32 from "crc-32";
 import { toTwosComplementHex } from "./helpers/twoscomplement";
 import * as collectors from "./collectors";
-import { Metadata1Data } from "./types/collectors";
 
 const identifier = "ECdITeCs";
 const material: Material = [1888420705, 2576816180, 2347232058, 874813317];
