@@ -1,7 +1,7 @@
 import { CollectorData, Metadata1Data } from "./types/collectors";
 import { tea, Material } from "./helpers/tea";
 import crc32 from "crc-32";
-import { toTwosComplementHex } from "./helpers/twoscomplement";
+import { uintToHex } from "./helpers/hex";
 import * as collectors from "./collectors";
 
 const identifier = "ECdITeCs";
@@ -15,7 +15,7 @@ export const generate = (data: CollectorData): Metadata1Data => {
 
 export const encrypt = (metadata1: Metadata1Data): string => {
   const str = JSON.stringify(metadata1);
-  const crcsum = toTwosComplementHex(crc32.str(str)).toUpperCase();
+  const crcsum = uintToHex(crc32.str(str)).toUpperCase();
 
   const payload = crcsum + "#" + str;
 
