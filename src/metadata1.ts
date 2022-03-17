@@ -1,7 +1,6 @@
 import { CollectorData } from "./types/collectors";
 import { tea, Material } from "./helpers/tea";
 import crc32 from "crc-32";
-
 import { toTwosComplementHex } from "./helpers/twoscomplement";
 import * as Collectors from "./collectors";
 import { Metadata1Data } from "./types/collectors";
